@@ -1,0 +1,41 @@
+.usage-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.usage-badge__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.usage-badge__pill--fast {
+  background: var(--color-success-muted);
+  color: var(--color-success);
+  border-color: var(--color-success);
+}
+
+.usage-badge__pill--moderate {
+  background: var(--color-warning-muted);
+  color: var(--color-warning);
+  border-color: var(--color-warning);
+}
+
+.usage-badge__pill--slow {
+  background: var(--color-danger-muted);
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.usage-badge__pill--neutral {
+  background: var(--color-surface-raised);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+}

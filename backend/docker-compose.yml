@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    container_name: sentinel-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sentinel
+      POSTGRES_PASSWORD: sentinel
+      POSTGRES_DB: sentinel
+    ports:
+      - "5432:5432"
+    volumes:
+      - sentinel_pg_data:/var/lib/postgresql/data
+
+  neo4j:
+    image: neo4j:5
+    container_name: sentinel-neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/sentinel-password
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - sentinel_neo4j_data:/data
+
+volumes:
+  sentinel_pg_data:
+  sentinel_neo4j_data:
