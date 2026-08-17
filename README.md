@@ -30,6 +30,12 @@ anything is written externally.
 > (`backend/app/graph/workflow.py`) while iterating on the Analyzer → SRS path in
 > isolation. Re-enable by uncommenting the relevant nodes/edges.
 
+## Screenshots
+
+| Requirement Input | Analyzing | AI Analysis (side-by-side) |
+| --- | --- | --- |
+| ![Requirement input screen](docs/screenshots/01-requirement-input.png) | ![Analyzing loader](docs/screenshots/02-analyzing-loader.png) | ![AI analysis result](docs/screenshots/03-ai-analysis.png) |
+
 ## Architecture
 
 - **Orchestration:** LangGraph — a stateful, checkpointed graph (Postgres-backed) so
