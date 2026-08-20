@@ -1,0 +1,62 @@
+.child-story-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.child-story-card__title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.child-story-card__title {
+  flex: 1;
+  border: 1px solid var(--color-border-input);
+  border-radius: 7px;
+  padding: 7px 9px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.child-story-card__remove {
+  border: none;
+  background: none;
+  color: var(--color-text-faint);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.child-story-card__description {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 44px;
+  border: 1px solid var(--color-border-input);
+  border-radius: 7px;
+  padding: 7px 9px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  resize: vertical;
+  color: var(--color-text-label);
+  background: var(--color-surface);
+}
+
+.child-story-card__meta-row {
+  display: flex;
+  gap: 8px;
+}
+
+.child-story-card__select {
+  border: 1px solid var(--color-border-input);
+  border-radius: 6px;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: var(--color-text);
+  background: var(--color-surface);
+}

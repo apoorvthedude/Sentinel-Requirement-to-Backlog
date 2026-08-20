@@ -1,62 +1,85 @@
 :root {
-  /* Light palette (default) */
-  --color-bg: #f6f7f9;
+  /* Light palette (default) — matches design_handoff_sentinel_ui */
+  --color-bg: #f4f5f7;
   --color-surface: #ffffff;
-  --color-surface-raised: #f1f2f5;
-  --color-border: #e3e5ea;
-  --color-border-subtle: #ebedf1;
+  --color-surface-raised: #f1f5f9;
+  --color-border: rgba(15, 23, 42, 0.08);
+  --color-border-subtle: rgba(15, 23, 42, 0.05);
+  --color-border-input: rgba(15, 23, 42, 0.12);
 
-  --color-text: #14171f;
-  --color-text-muted: #5b6270;
-  --color-text-faint: #9096a3;
+  --color-text: #0f1720;
+  --color-text-muted: #64748b;
+  --color-text-label: #475569;
+  --color-text-faint: #94a3b8;
+  --color-text-strong: #1e293b;
 
-  --color-accent: #6366f1;
-  --color-accent-hover: #4f46e5;
-  --color-accent-muted: #6366f11a;
+  --color-accent: #4f46e5;
+  --color-accent-hover: #4338ca;
+  --color-accent-muted: #eef2ff;
+  --color-accent-disabled: #c7d2fe;
   --color-accent-contrast: #ffffff;
 
   --color-success: #16a34a;
-  --color-success-muted: #16a34a1a;
-  --color-warning: #d97706;
-  --color-warning-muted: #d977061a;
+  --color-success-muted: #f0fdf4;
+  --color-warning: #b45309;
+  --color-warning-muted: #fffbeb;
+  --color-warning-border: #fde68a;
+  --color-warning-strong-text: #92400e;
+  --color-warning-body-text: #78350f;
   --color-danger: #dc2626;
-  --color-danger-muted: #dc26261a;
+  --color-danger-muted: #fee2e2;
+
+  --color-ai-bg: #f8f7ff;
+  --color-ai-border: #e4e0fb;
 
   --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-pill: 20px;
 
-  --shadow-card: 0 1px 2px rgba(20, 23, 31, 0.04), 0 8px 24px rgba(20, 23, 31, 0.06);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04);
 
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: "SF Mono", "Fira Code", ui-monospace, monospace;
 }
 
-/* Dark palette: applied automatically when the OS prefers dark and the
-   user hasn't explicitly chosen light... */
+/* Dark palette: our own consistent extension (the design handoff has no dark mode
+   to copy — this keeps the existing toggle feature working with a palette that
+   follows the same relationships as the new light palette). Applied automatically
+   when the OS prefers dark and the user hasn't explicitly chosen light... */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --color-bg: #0b0d12;
-    --color-surface: #12151c;
-    --color-surface-raised: #171b24;
-    --color-border: #262b36;
-    --color-border-subtle: #1c202a;
+    --color-bg: #0f1115;
+    --color-surface: #171a20;
+    --color-surface-raised: #1d2129;
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-subtle: rgba(255, 255, 255, 0.05);
+    --color-border-input: rgba(255, 255, 255, 0.14);
 
-    --color-text: #e8eaed;
-    --color-text-muted: #9aa1ae;
-    --color-text-faint: #656c7a;
+    --color-text: #eef0f3;
+    --color-text-muted: #9aa3b1;
+    --color-text-label: #b3bcc9;
+    --color-text-faint: #74808f;
+    --color-text-strong: #e2e6ea;
 
-    --color-accent: #6366f1;
-    --color-accent-hover: #7476f4;
-    --color-accent-muted: #6366f126;
+    --color-accent: #6d68f0;
+    --color-accent-hover: #8481f3;
+    --color-accent-muted: #6d68f026;
+    --color-accent-disabled: #3d3a6b;
     --color-accent-contrast: #ffffff;
 
     --color-success: #22c55e;
-    --color-success-muted: #22c55e26;
-    --color-warning: #f59e0b;
-    --color-warning-muted: #f59e0b26;
+    --color-success-muted: #22c55e22;
+    --color-warning: #d08a2e;
+    --color-warning-muted: #d08a2e1f;
+    --color-warning-border: #8a5a1e;
+    --color-warning-strong-text: #f0c896;
+    --color-warning-body-text: #e0b482;
     --color-danger: #ef4444;
     --color-danger-muted: #ef444426;
+
+    --color-ai-bg: #1e1c33;
+    --color-ai-border: #35315c;
 
     --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.24);
   }
@@ -64,27 +87,37 @@
 
 /* ...or when the user explicitly toggles dark mode, regardless of OS pref. */
 :root[data-theme="dark"] {
-  --color-bg: #0b0d12;
-  --color-surface: #12151c;
-  --color-surface-raised: #171b24;
-  --color-border: #262b36;
-  --color-border-subtle: #1c202a;
+  --color-bg: #0f1115;
+  --color-surface: #171a20;
+  --color-surface-raised: #1d2129;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --color-border-input: rgba(255, 255, 255, 0.14);
 
-  --color-text: #e8eaed;
-  --color-text-muted: #9aa1ae;
-  --color-text-faint: #656c7a;
+  --color-text: #eef0f3;
+  --color-text-muted: #9aa3b1;
+  --color-text-label: #b3bcc9;
+  --color-text-faint: #74808f;
+  --color-text-strong: #e2e6ea;
 
-  --color-accent: #6366f1;
-  --color-accent-hover: #7476f4;
-  --color-accent-muted: #6366f126;
+  --color-accent: #6d68f0;
+  --color-accent-hover: #8481f3;
+  --color-accent-muted: #6d68f026;
+  --color-accent-disabled: #3d3a6b;
   --color-accent-contrast: #ffffff;
 
   --color-success: #22c55e;
-  --color-success-muted: #22c55e26;
-  --color-warning: #f59e0b;
-  --color-warning-muted: #f59e0b26;
+  --color-success-muted: #22c55e22;
+  --color-warning: #d08a2e;
+  --color-warning-muted: #d08a2e1f;
+  --color-warning-border: #8a5a1e;
+  --color-warning-strong-text: #f0c896;
+  --color-warning-body-text: #e0b482;
   --color-danger: #ef4444;
   --color-danger-muted: #ef444426;
+
+  --color-ai-bg: #1e1c33;
+  --color-ai-border: #35315c;
 
   --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.24);
 }

@@ -1,0 +1,49 @@
+.acceptance-criteria-editor__label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-label);
+  margin-bottom: 8px;
+}
+
+.acceptance-criteria-editor__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.acceptance-criteria-editor__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.acceptance-criteria-editor__input {
+  flex: 1;
+  border: 1px solid var(--color-border-input);
+  border-radius: 7px;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.acceptance-criteria-editor__remove {
+  border: none;
+  background: none;
+  color: var(--color-text-faint);
+  font-size: 13px;
+  cursor: pointer;
+  padding: 4px 6px;
+}
+
+.acceptance-criteria-editor__add {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  color: var(--color-accent);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0;
+}

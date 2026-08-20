@@ -1,0 +1,21 @@
+.issue-type-picker {
+  display: flex;
+  gap: 8px;
+}
+
+.issue-type-picker__option {
+  border: 1px solid var(--color-border-input);
+  background: var(--color-surface);
+  color: var(--color-text-label);
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+
+.issue-type-picker__option--active {
+  border-color: var(--color-accent);
+  background: var(--color-accent-muted);
+  color: var(--color-accent);
+}

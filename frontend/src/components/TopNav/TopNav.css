@@ -1,0 +1,74 @@
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 28px;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.top-nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.top-nav__brand-mark {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--color-accent);
+}
+
+.top-nav__brand-name {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+.top-nav__pills {
+  display: flex;
+  gap: 4px;
+  background: var(--color-bg);
+  border-radius: 8px;
+  padding: 3px;
+  margin-left: 8px;
+}
+
+.top-nav__pill {
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.top-nav__pill--active {
+  background: var(--color-surface);
+  color: var(--color-accent);
+}
+
+.top-nav__spacer {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .top-nav {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  .top-nav__pills {
+    order: 3;
+    width: 100%;
+    margin-left: 0;
+  }
+}

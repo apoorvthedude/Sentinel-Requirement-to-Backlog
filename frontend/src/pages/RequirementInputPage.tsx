@@ -62,7 +62,9 @@ export default function RequirementInputPage() {
                   <span className="requirement-input__hint">
                     Step 1 of 4 — nothing is sent to Jira yet
                   </span>
-                  <Button type="submit">AI Analyze</Button>
+                  <Button type="submit" disabled={!text.trim()}>
+                    AI Analyze
+                  </Button>
                 </div>
                 {error && <p className="requirement-input__error">Error: {error}</p>}
               </form>

@@ -5,8 +5,11 @@ import Layout from "../components/Layout";
 import Card from "../components/Card";
 import Button from "../components/Button";
 import UsageBadge from "../components/UsageBadge";
+import PulsingDots from "../components/PulsingDots";
+import SimilarTicketsList from "../components/SimilarTicketsList";
 import { buildSteps } from "../lib/steps";
 import { getReview } from "../api/client";
+import { MOCK_SIMILAR_TICKETS } from "../mockData";
 import type { IngestResponse, SRSRequirementEntry } from "../types/api";
 import "./AnalyzePage.css";
 
@@ -81,9 +84,12 @@ export default function AnalyzePage() {
         )}
 
         {!error && !data && (
-          <Card>
-            <p className="analyze-page__loading">Loading analysis…</p>
-          </Card>
+          <div className="analyze-page__loading-wrap">
+            <PulsingDots
+              label="Analyzing your requirement…"
+              sublabel="Checking backlog overlap and knowledge graph"
+            />
+          </div>
         )}
 
         {data?.status === "rejected" && data.rejection && (
@@ -121,6 +127,7 @@ export default function AnalyzePage() {
                   <h2 className="analyze-page__srs-title">{srs.title}</h2>
                   <p className="analyze-page__srs-summary">{srs.summary}</p>
                   <RequirementList requirements={srs.requirements} />
+                  <SimilarTicketsList tickets={MOCK_SIMILAR_TICKETS} />
                 </>
               )}
 

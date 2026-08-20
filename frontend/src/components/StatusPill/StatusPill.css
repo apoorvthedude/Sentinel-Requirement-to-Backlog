@@ -1,0 +1,28 @@
+.status-pill {
+  display: inline-block;
+  border-radius: var(--radius-pill);
+  padding: 3px 9px;
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-pill--success {
+  background: var(--color-success-muted);
+  color: var(--color-success);
+}
+
+.status-pill--warning {
+  background: var(--color-warning-muted);
+  color: var(--color-warning);
+}
+
+.status-pill--neutral {
+  background: var(--color-surface-raised);
+  color: var(--color-text-label);
+}
+
+.status-pill--accent {
+  background: var(--color-accent-muted);
+  color: var(--color-accent);
+}

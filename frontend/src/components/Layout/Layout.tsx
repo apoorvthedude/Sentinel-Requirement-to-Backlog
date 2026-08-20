@@ -1,31 +1,33 @@
 import type { ReactNode } from "react";
-import { Link } from "react-router-dom";
-import StepTimeline, { type Step } from "../StepTimeline";
-import ThemeToggle from "../ThemeToggle";
-import UserMenu from "../UserMenu";
+import { useLocation } from "react-router-dom";
+import WizardStepper, { type Step } from "../WizardStepper";
+import TopNav, { type TopNavActive } from "../TopNav";
 import "./Layout.css";
 
 interface LayoutProps {
-  steps: Step[];
+  steps?: Step[];
   children: ReactNode;
 }
 
+function deriveActiveTab(pathname: string): TopNavActive {
+  if (pathname === "/dashboard") return "dashboard";
+  if (pathname === "/history") return "history";
+  if (pathname === "/settings") return "settings";
+  return "wizard";
+}
+
 export default function Layout({ steps, children }: LayoutProps) {
+  const location = useLocation();
+  const active = deriveActiveTab(location.pathname);
+
   return (
     <div className="layout">
-      <header className="layout__header">
-        <Link to="/" className="layout__brand">
-          <span className="layout__brand-mark" aria-hidden="true" />
-          <span className="layout__brand-name">Sentinel</span>
-        </Link>
-        <div className="layout__timeline">
-          <StepTimeline steps={steps} />
+      <TopNav active={active} />
+      {steps && (
+        <div className="layout__stepper">
+          <WizardStepper steps={steps} />
         </div>
-        <div className="layout__actions">
-          <ThemeToggle />
-          <UserMenu />
-        </div>
-      </header>
+      )}
       <main className="layout__content">{children}</main>
     </div>
   );

@@ -18,9 +18,10 @@
   margin: 0;
 }
 
-.analyze-page__loading {
-  color: var(--color-text-muted);
-  margin: 0;
+.analyze-page__loading-wrap {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
 }
 
 .analyze-page__error {

@@ -1,4 +1,4 @@
-import type { Step, StepStatus } from "../components/StepTimeline";
+import type { Step, StepStatus } from "../components/WizardStepper";
 
 export const STEP_ORDER = [
   { key: "input", label: "Requirement" },

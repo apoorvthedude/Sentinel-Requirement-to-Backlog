@@ -1,0 +1,36 @@
+.stat-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+}
+
+.stat-card__label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+
+.stat-card__value {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.stat-card__delta {
+  font-size: 12px;
+}
+
+.stat-card__delta--positive {
+  color: var(--color-success);
+}
+
+.stat-card__delta--warning {
+  color: var(--color-warning);
+}
+
+.stat-card__delta--neutral {
+  color: var(--color-text-muted);
+}

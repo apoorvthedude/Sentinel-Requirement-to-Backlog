@@ -1,0 +1,51 @@
+.similar-tickets {
+  margin-top: 16px;
+}
+
+.similar-tickets__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-text-faint);
+  margin-bottom: 8px;
+}
+
+.similar-tickets__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 9px 12px;
+  margin-bottom: 6px;
+}
+
+.similar-tickets__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.similar-tickets__title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-strong);
+}
+
+.similar-tickets__status {
+  font-size: 11.5px;
+  color: var(--color-text-faint);
+}
+
+.similar-tickets__match {
+  flex-shrink: 0;
+  background: var(--color-warning-muted);
+  color: var(--color-warning);
+  border-radius: var(--radius-pill);
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 700;
+}

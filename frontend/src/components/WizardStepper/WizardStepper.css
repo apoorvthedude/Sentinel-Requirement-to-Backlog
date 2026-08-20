@@ -1,0 +1,77 @@
+.wizard-stepper {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wizard-stepper__item {
+  display: flex;
+  align-items: center;
+}
+
+.wizard-stepper__circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1.5px solid var(--color-border-input);
+  background: var(--color-surface);
+  color: var(--color-text-faint);
+  flex-shrink: 0;
+}
+
+.wizard-stepper__item--done .wizard-stepper__circle {
+  background: var(--color-success);
+  color: #ffffff;
+  border-color: var(--color-success);
+}
+
+.wizard-stepper__item--current .wizard-stepper__circle {
+  background: var(--color-accent);
+  color: #ffffff;
+  border-color: var(--color-accent);
+}
+
+.wizard-stepper__item--rejected .wizard-stepper__circle {
+  background: var(--color-surface);
+  color: var(--color-danger);
+  border-color: var(--color-danger);
+}
+
+.wizard-stepper__label {
+  margin-left: 8px;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--color-text-faint);
+}
+
+.wizard-stepper__item--done .wizard-stepper__label {
+  color: var(--color-text-label);
+}
+
+.wizard-stepper__item--current .wizard-stepper__label {
+  color: var(--color-text);
+}
+
+.wizard-stepper__item--rejected .wizard-stepper__label {
+  color: var(--color-danger);
+}
+
+.wizard-stepper__connector {
+  width: 64px;
+  height: 1.5px;
+  background: var(--color-border-input);
+  margin: 0 14px;
+  flex-shrink: 0;
+}
+
+.wizard-stepper__item--done .wizard-stepper__connector {
+  background: var(--color-success);
+}

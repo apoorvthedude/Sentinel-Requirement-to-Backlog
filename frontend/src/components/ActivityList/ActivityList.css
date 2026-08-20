@@ -1,0 +1,33 @@
+.activity-list {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 8px 0;
+}
+
+.activity-list__header {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 14px 20px 10px;
+  color: var(--color-text-label);
+}
+
+.activity-list__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.activity-list__text {
+  font-size: 13.5px;
+  color: var(--color-text-strong);
+}
+
+.activity-list__time {
+  font-size: 12px;
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  margin-left: 16px;
+}

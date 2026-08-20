@@ -1,0 +1,58 @@
+.history-table {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.history-table__header {
+  display: grid;
+  grid-template-columns: 2.4fr 1fr 1fr 1fr;
+  padding: 12px 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--color-text-faint);
+  letter-spacing: 0.03em;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.history-table__row {
+  display: grid;
+  grid-template-columns: 2.4fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border-subtle);
+  font-size: 13.5px;
+}
+
+.history-table__row:last-child {
+  border-bottom: none;
+}
+
+.history-table__title {
+  color: var(--color-text-strong);
+  font-weight: 500;
+}
+
+.history-table__status {
+  width: fit-content;
+}
+
+.history-table__ticket {
+  color: var(--color-text-muted);
+}
+
+.history-table__date {
+  color: var(--color-text-faint);
+}
+
+@media (max-width: 700px) {
+  .history-table__header {
+    display: none;
+  }
+
+  .history-table__row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
